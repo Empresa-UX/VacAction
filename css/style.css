@@ -1,0 +1,119 @@
+/* ----------------------------------------------- Cuerpo de la Página ----------------------------------------------- */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("/img/backgrounds/background (9).jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* ------------------------------------------------- Cuerpo deL Login ------------------------------------------------- */
+
+#login-content {
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    margin: auto;
+    width: 25%;
+    height: 40%;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+#login-content img {
+    margin-top: 20px;
+    width: 30%;
+    height: 20%;
+}
+
+#login-content h3 {
+    font-size: 20px;
+    word-spacing: 0.1em;
+    text-align: center;
+
+    margin-top: 5px;
+}
+
+#login-content .traveler {
+    transition: color 0.3s;
+}
+
+#login-content h3:hover .traveler {
+    color: rgb(61, 175, 175);
+}
+
+#login-content input {
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    
+    height: 20px;
+    width: 100%;
+
+    color: white;
+
+    margin-top: 7px;
+    margin-bottom: 7px;
+
+    transition: border-bottom 0.3s, box-shadow 0.3s;
+
+    caret-color: transparent;
+}
+
+#login-content input:hover {
+    border-bottom: 1px solid rgb(61, 175, 175);
+    box-shadow: 0 1.5px 0 0 rgb(61, 175, 175);
+    border-radius: 2px;
+}
+
+#login-content input[type="submit"] {
+    width: auto;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    transition: border-bottom 0.3s, box-shadow 0.3s;
+}
+
+#login-content input[type="submit"]:hover {
+    border-bottom: 1px solid rgb(61, 175, 175);
+    box-shadow: 0 1.5px 0 0 rgb(61, 175, 175);
+    border-radius: 2px;
+}
+
+/* -------------------------------------------- Código del Pie de Página -------------------------------------------- */
+
+#footer {
+    background-color: rgb(20, 20, 20);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    min-height: 15vh;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#footer img {
+    text-align: center;
+    height: auto;
+    width: 200px;
+    margin-left: 300px;
+    margin-right: 350px;
+}
