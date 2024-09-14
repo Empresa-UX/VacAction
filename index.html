@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- http://127.0.0.1:5500/index.html -->
+     
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="./img/icons_logo/icon_black.ico" type="image/x-icon">
@@ -12,40 +14,56 @@
 
 </head>
 <body>
+    <body>
+        <section>
+            <div id="login-content">
+                <img src="./img/icons_logo/icon_white2.png" alt="VacAction_logo">
+                <h3>Welcome, <span class="traveler">traveler.</span></h3>
+    
+                <form method="POST">
+                    <label for="email">Email Address</label>
+                    <input type="email" name="email" id="email" autocomplete="off">
+    
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password">
+                    
+                    <div class="remember-session">
+                        <input type="checkbox" name="checkbox" id="checkbox">
+                        <label for="checkbox">Remember me</label>
+                    </div>
+                    
 
-    <section>
-        <div id="login-content">
-            <img src="./img/icons_logo/icon_white2.png" alt="VacAction_logo">
-            <h3>Welcome, <span class="traveler">traveler.</span></h3>
+                    <input type="submit" name="submit" id="submit" value="Login in">
 
-            <form action="POST">
-                <label for="email">Email Address</label>
-                <input type="email" name="password" id="password">
+                    <a href="">Forgot password?</a>
+                    <a href="./html/register.html">Don't have an account?</a>
 
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password">
-                
-                <input type="submit" name="submit" id="submit" value="Login in">
-            </form>
-        </div>
-    </section>
-
-    <section id="content-global">
-
-    </section>
-
-    <section id="footer">
-        <footer>
-            <span id="sector_1">
-                    Direccion: *************************
-            </span>
-            <span id="sector_2">
-                    <img src="./img/icons_footer/icon_footer.png" alt="redes sociales">
-            </span>
-            <span id="sector_3">
-                    Derechos reservados : VacAction ©
-            </span>
-        </footer>
-    </section>
+                    <div id="googleAcount">
+                        <p>Or sign in with:</p>
+                        <button onclick="window.location.href='/auth/google'">
+                            <img src="./img/google_logo/google-logo.png" alt="Google logo" /> Sign in with Google
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    
+        <section id="content-global">
+            
+        </section>
+    
+        <section id="footer">
+            <footer>
+                <span id="sector_1">
+                        Direccion: *************************
+                </span>
+                <span id="sector_2">
+                        <img src="./img/icons_footer/icon_footer.png" alt="Redes sociales">
+                </span>
+                <span id="sector_3">
+                        Derechos reservados : VacAction ©
+                </span>
+            </footer>
+        </section>
 </body>
 </html>
