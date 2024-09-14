@@ -115,7 +115,20 @@ body { /* Contenido general */
 #login-content h3:hover .traveler { /* Hover del Submit*/
     color: rgb(61, 175, 175);
 }
+#googleAcount {
+    color: white;
+}
+#googleAcount button{
+    border: none;
+    background: transparent;
+    caret-color: transparent;
+    cursor: pointer;
+}
 
+#googleAcount img{
+    height: 30px;
+    width: auto;
+}
 /* -------------------------------------------- Código del Pie de Página -------------------------------------------- */
 
 #footer { /* Contenido general */

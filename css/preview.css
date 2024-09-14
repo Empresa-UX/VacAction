@@ -6,13 +6,42 @@
 #header {
     background-color: darkslategray;
     color: white;
-    min-height: 10vh;
+    min-height: 1vh;
     width: 100%;
 }
 
-
-#header img {
-    height: 50px;
+#sector_1 img {
+    height: 30px;
     width: auto;
-    padding: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+}
+#sector_3 button{
+    border: none;
+    background: transparent;
+    caret-color: transparent;
+    cursor: pointer;
+}
+#sector_2 input{
+    outline: none;
+    border: none;
+    background: transparent;
+    caret-color: transparent;
+    color: white;
+    cursor: pointer;
+    height: 50px;
+    font-size: 20px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 15px;
+}
+
+
+#sector_3 img {
+    height: 30px;
+    width: auto;
+    margin-left: 340px;
+    padding-top: 10px;
+    padding-bottom: 0px;
 }
