@@ -10,17 +10,17 @@ body { /* Contenido general */
     background-size: cover;
 }
 
-/* ------------------------------------------------- Cuerpo deL Register ------------------------------------------------- */
+/* ------------------------------------------------- Cuerpo deL Forgot ------------------------------------------------- */
 
-#register-content { /* Contenido Register */
+#forgot-content { /* Contenido Login */
     
     margin: auto;
     margin-top: 80px;
-    margin-bottom: 150px;
+    margin-bottom: 180px;
 
     width: 25%;
     height: 40%;
-
+    
     color: white;
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -31,24 +31,35 @@ body { /* Contenido general */
     padding: 30px 30px 30px 30px;
 }
 
-#register-content img { /* Imagen superior del Login */
+#forgot-content img { /* Imagen superior del Login */
     margin-top: 20px;
     width: 30%;
     height: 20%;
 }
 
-#register-content h3 { /* Subtítulo del Login */
+#forgot-content h3 { /* Subtítulo del Login */
     font-size: 20px;
     text-align: center;
 
     margin-top: 5px;
 }
 
-#register-content .community { /* Span del subtítulo */
+#forgot-content label {
+    display: block;
+    margin-top: 7px;
+}
+
+#forgot-content .bgGreen { /* Span del subtítulo */
     transition: color 0.4s;
 }
 
-#register-content input { /* Input's generales del Login */
+#forgot-content label {
+    display: block;
+    margin-top: 7px;
+    text-align: center;
+}
+
+#forgot-content input { /* Input's generales del Login */
     outline: none;
 
     border: none;
@@ -61,39 +72,17 @@ body { /* Contenido general */
 
     color: white;
 
-    margin-top: 7px;
+    margin-top: 10px;
     margin-bottom: 7px;
 
     transition: border-bottom 0.4s, box-shadow 0.4s;
 }
 
-#register-content label {
-    display: block;
-    margin-top: 7px;
-}
-
-#register-content .password, #register-content .optional {
-    width: 49%;
-    display: inline-block;
-
-    text-align: left;
-}
-
-#register-content .password input, #register-content .optional input {
-    padding: 0;
-    width: 80%;
-}
-
-#register-content .password label, #register-content .optional label {
-    padding: 0;
-    width: 80%;
-}
-
-#register-content input[type="submit"] { /* Input Submit */
+#forgot-content input[type="submit"] { /* Input Submit */
     width: auto;
     cursor: pointer;
 
-    margin: 12px 0px 6px 0px;
+    margin: 7px 0px 7px 0px;
     padding: 0px 0px 5px 0px;
 
     text-align: center;
@@ -102,45 +91,20 @@ body { /* Contenido general */
     display: inline;
 }
 
-#register-content .acceptTerms {
-    display: flex;
-    margin: 10px 0px 5px 0px;
-}
-
-#register-content input[type="checkbox"] {
-    margin: 0;
-    width: auto;}
-
-#register-content label[for="checkbox"] {
-    margin: 0;
-    padding: 0px 0px 0px 5px;
-
-    font-size: 14px;
-    display: inline-block;
-}
-
-#register-content input[type="checkbox"]:hover, /* Hover del Input Checkbox */
-#register-content input[type="checkbox"]:focus { /* Focus del Input Checkbox */
-    box-shadow: none;
-    outline: none;
-    cursor: pointer;
-}
-
-#register-content input:hover { /* Hover de los Input's */
+#forgot-content input:hover { /* Hover de los Input's */
     border-bottom: 1px solid rgb(61, 175, 175);
     box-shadow: 0 1.5px 0 0 rgb(61, 175, 175);
     border-radius: 2px;
 }
 
-#register-content h3:hover .community { /* Hover del Submit*/
+#forgot-content h3:hover .bgGreen { /* Hover del Submit*/
     color: rgb(61, 175, 175);
 }
-
 
 /* -------------------------------------------- Código del Pie de Página -------------------------------------------- */
 
 #footer-content { /* Contenido general */
-    bottom: 0px;
+    margin: 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -150,16 +114,18 @@ body { /* Contenido general */
     align-items: center;
     flex-direction: column;
     padding: 20px 0;
-    min-height: auto;
+    min-height: 15px;
+    margin-top: auto;
+    align-items: center;
 }
 
 #sectores div{
     display: inline-block;
+    top: 20px;
+    margin: 20px 50px;
 }
 
 #sector_1 {
-    position: absolute;
-    left: 0px;
     padding: 30px 20px;
 }
 
@@ -168,13 +134,10 @@ body { /* Contenido general */
 }
 
 #sector_3 {
-    position: absolute;
-    right: 0px;
     padding: 30px 20px;
 }
 
 #footer-content img { /* Imagen del Pie de Página */
-    text-align: center;
     height: auto;
     width: 170px;
 }

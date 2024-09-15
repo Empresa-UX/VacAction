@@ -1,22 +1,25 @@
-/* ----------------------------------------------- Cuerpo de la Página ----------------------------------------------- */
+/* ----------------------------------------------- Cuerpo de la Página ---------------------------------------------- */
 
 body { /* Contenido general */
     margin: 0;
     padding: 0;
-
+    display: flex;
+    flex-direction: column;
     background-image: url("/img/backgrounds/background (9).jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: 100% 100%;
+    min-height: 100vh;
 }
 
-/* ------------------------------------------------- Cuerpo deL Login ------------------------------------------------- */
+/* ------------------------------------------------ Cuerpo deL Login ------------------------------------------------ */
 
 #login-content { /* Contenido Login */
     
     margin: auto;
     margin-top: 80px;
     margin-bottom: 180px;
+
     width: 25%;
     height: 40%;
     
@@ -43,12 +46,18 @@ body { /* Contenido general */
     margin-top: 5px;
 }
 
+#register-content label {
+    display: block;
+    margin-top: 7px;
+}
+
 #login-content .traveler { /* Span del subtítulo */
     transition: color 0.4s;
 }
 
 #login-content label {
     display: block;
+    margin-top: 7px;
     text-align: center;
 }
 
@@ -65,7 +74,7 @@ body { /* Contenido general */
 
     color: white;
 
-    margin-top: 7px;
+    margin-top: 10px;
     margin-bottom: 7px;
 
     transition: border-bottom 0.4s, box-shadow 0.4s;
@@ -85,20 +94,21 @@ body { /* Contenido general */
 }
 
 #login-content .remember-session {
-    text-align: left;
-    margin: 5px 0px 5px 0px;
+    display: flex;
+    margin: 10px 0px 5px 0px;
 }
 
-#login-content input[type="checkbox"], #login-content label[for="checkbox"] {
-    display: inline-block;
-
+#login-content input[type="checkbox"] {
+    margin: 0;
     width: auto;
-    height: 100%;
-
 }
 
 #login-content label[for="checkbox"] {
+    margin: 0;
+    padding: 0px 0px 0px 5px;
+
     font-size: 14px;
+    display: inline-block;
 }
 
 #login-content input[type="checkbox"]:hover, /* Hover del Input Checkbox */
@@ -158,6 +168,7 @@ body { /* Contenido general */
 /* -------------------------------------------- Código del Pie de Página -------------------------------------------- */
 
 #footer-content { /* Contenido general */
+    /* margin: 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -167,16 +178,30 @@ body { /* Contenido general */
     align-items: center;
     flex-direction: column;
     padding: 20px 0;
-    min-height: 1vh;
+    min-height: 15px;
+    margin-top: auto;
+    align-items: center; */
+
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgb(20, 20, 20);
+    color: white;
+    flex-direction: column;
+    padding: 10px 0;
+    min-height: 15vh;
+    margin-top: auto;
+    align-items: center;
 }
 
 #sectores div{
     display: inline-block;
+    top: 20px;
+    margin: 20px 50px;
 }
 
 #sector_1 {
-    position: absolute;
-    left: 0px;
     padding: 30px 20px;
 }
 
@@ -185,15 +210,10 @@ body { /* Contenido general */
 }
 
 #sector_3 {
-    position: absolute;
-    right: 0px;
     padding: 30px 20px;
 }
 
 #footer-content img { /* Imagen del Pie de Página */
-    text-align: center;
     height: auto;
     width: 170px;
-    margin-left: 300px;
-    margin-right: 350px;
 }

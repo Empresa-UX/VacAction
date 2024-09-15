@@ -2,15 +2,24 @@
 #body {
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 1000px;
+    background-image: url("/img/backgrounds/background-preview.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    min-height: 100vh;
 }
 /* ------------------------------------------------- Cuerpo del header ------------------------------------------------- */
 #header {
+    position: sticky;
+    top: 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: darkslategray;
     color: white;
-    min-height: 1vh;
     width: 100%;
     padding: 5px 0;
 }
@@ -20,55 +29,100 @@
 }
 
 /* ------------------------------------------------- Cuerpo sector_1 ------------------------------------------------- */
-#sector_1 {
-    position: absolute;
+#sector_1_header {
+    position: relative;
+    top: 4px;
     left: 0px;
     padding: 9px 20px;
 }
-#sector_1 img {
+#sector_1_header img {
     height: 30px;
     width: auto;
     margin-right: 20px;
 }
+
+#sector_1_header img:active{
+    height: 25;
+    width: auto;
+    margin-bottom: 1px;
+    margin-top: 3px;
+    margin-left: 3px;
+}
 /* ------------------------------------------------- Cuerpo sector_2 ------------------------------------------------- */
-#sector_2 {
+#sector_2_header {
     position: relative;
-    left: 50px;
+    bottom: 6px;
     display: flex;
     align-items: center;
-    
 }
 
-#sector_2 a {
+#sector_2_header a {
     text-decoration-line: none;
     color: white;
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0px 30px;
+    margin: 0px 40px;
 }
 
-#sector_2 p {
+#sector_2_header a:hover{
+    color: darkcyan;
+}
+
+#sector_2_header p {
     display: inline-block;
 }
 /* ------------------------------------------------- Cuerpo sector_3 ------------------------------------------------- */
-#sector_3 {
+#sector_3_header {
     position: absolute;
     right: 0px;
-    margin: 9px 20px;
+    margin: 13px 20px;
 }
 
-#sector_3 button{
+#sector_3_header button{
     border: none;
     background: transparent;
     caret-color: transparent;
     cursor: pointer;
 }
 
-#sector_3 img {
+#sector_3_header img {
     height: 30px;
     width: auto;
 }
+
+#sector_3_header img:active{
+    height: 25;
+    width: auto;
+    margin-bottom: 1px;
+    margin-top: 2.5px;
+    margin-right: 2px;
+}
+
 #flecha_icono img{
     height: 15px;
     margin-bottom: 6px;
+}
+/* ------------------------------------------------- footer ------------------------------------------------- */
+#footer {
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgb(20, 20, 20);
+    color: white;
+    flex-direction: column;
+    padding: 10px 0;
+    min-height: 15vh;
+    margin-top: auto;
+    align-items: center;
+}
+#footer div{
+    display: inline-block;
+    top: 20px;
+    margin: 20px 100px;
+    height: auto;
+}
+/* ------------------------------------------------- Contenido ------------------------------------------------- */
+#contenido {
+    margin: 600px 30px;
 }
