@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- http://127.0.0.1:5500/html/login.html -->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style-login.css">
+    <link rel="icon" href="../img/icons_logo/icon_black.ico" type="image/x-icon">
+
+    <title>VacAction | Login</title>
+
+</head>
+
+<body>
+    <section>
+        <div id="login-content">
+            <img src="../img/icons_logo/icon_white2.png" alt="VacAction_logo">
+            <h3>Welcome, <span class="traveler">traveler.</span></h3>
+
+            <form method="POST">
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" autocomplete="off" required>
+
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required>
+
+                <div class="remember-session">
+                    <input type="checkbox" name="checkbox" id="checkbox">
+                    <label for="checkbox">Remember me</label>
+                </div>
+
+                <input type="submit" name="submit" id="submit" value="Login in">
+
+                <div class="googleAcount">
+                    <p>Or sign in with:</p>
+                    <button onclick="window.location.href='/auth/google'">
+                        <img src="../img/google_logo/google-logo.png" alt="Google logo" />
+                    </button>
+                </div>
+
+                <div class="enlaceCTA">
+                    <a href="../html/forgot.html" name="fotgot">Forgot password?</a>
+                    <a href="../html/register.html" name="register">Don't have an account?</a>
+                </div>
+            </form> 
+        </div>
+    </section>
+
+    <section id="footer-content">
+        <footer id="sectores">
+            <div id="sector_1">
+                <p>Direccion: *************************</p>
+            </div>
+            <div id="sector_2">
+                <img src="../img/icons_footer/icon_footer.png" alt="Redes sociales">
+            </div>
+            <div id="sector_3">
+                <p>Derechos reservados : VacAction ©</p>
+            </div>
+        </footer>
+    </section>
+</body>
+
+</html>

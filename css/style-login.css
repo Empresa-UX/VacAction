@@ -15,18 +15,17 @@ body { /* Contenido general */
 #login-content { /* Contenido Login */
     
     margin: auto;
-    margin-top: 100px;
-    margin-bottom: 150px;
-
+    margin-top: 80px;
+    margin-bottom: 180px;
     width: 25%;
     height: 40%;
-
+    
     color: white;
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
-    background-color: black;
-    border-radius: 20px;
+    background-color: rgb(10, 10, 10);
+    border-radius: 60px;
 
     padding: 30px 30px 30px 30px;
 }
@@ -50,7 +49,7 @@ body { /* Contenido general */
 
 #login-content label {
     display: block;
-    text-align: left;
+    text-align: center;
 }
 
 #login-content input { /* Input's generales del Login */
@@ -74,29 +73,32 @@ body { /* Contenido general */
 
 #login-content input[type="submit"] { /* Input Submit */
     width: auto;
-    text-align: center;
+    cursor: pointer;
 
+    margin: 7px 0px 7px 0px;
+    padding: 0px 0px 5px 0px;
+
+    text-align: center;
     font-size: 15px;
 
-    cursor: pointer;
-    display: block;
+    display: inline;
 }
 
 #login-content .remember-session {
-    width: 100%;
     text-align: left;
+    margin: 5px 0px 5px 0px;
 }
 
-#login-content input[type="checkbox"], #login-content label[for="checkbox"]{
+#login-content input[type="checkbox"], #login-content label[for="checkbox"] {
     display: inline-block;
+
     width: auto;
+    height: 100%;
+
 }
 
 #login-content label[for="checkbox"] {
-    font-size: 13px;
-    height: 100%;
-    border: 1px solid wheat;
-
+    font-size: 14px;
 }
 
 #login-content input[type="checkbox"]:hover, /* Hover del Input Checkbox */
@@ -115,43 +117,83 @@ body { /* Contenido general */
 #login-content h3:hover .traveler { /* Hover del Submit*/
     color: rgb(61, 175, 175);
 }
-#googleAcount {
+
+
+#login-content .googleAcount p {
+    margin: 7px 0px 7px 0px;
     color: white;
 }
-#googleAcount button{
+
+#login-content .googleAcount button{
     border: none;
     background: transparent;
     caret-color: transparent;
     cursor: pointer;
 }
 
-#googleAcount img{
+#login-content .googleAcount img{
+    margin: 7px 0px 7px 0px;
     height: 30px;
+
     width: auto;
 }
+
+#login-content .enlaceCTA a {
+    display: inline-block;
+    width: 49%;
+
+    margin: 7px 0px 7px 0px;
+    text-decoration: none;
+
+    font-size: 12px;
+    color: white;
+
+    transition: color 0.4s; /* Añadir transición para suavidad */
+}
+
+#login-content .enlaceCTA a:hover {
+    color: rgb(61, 175, 175); /* Cambiar color al hacer hover */
+}
+
 /* -------------------------------------------- Código del Pie de Página -------------------------------------------- */
 
-#footer { /* Contenido general */
+#footer-content { /* Contenido general */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     background-color: rgb(20, 20, 20);
-
     color: white;
     align-items: center;
-
-    display: flex;
     flex-direction: column;
-    
     padding: 20px 0;
-    min-height: 15vh;
-    
-    justify-content: space-between;
-}  
+    min-height: 1vh;
+}
 
-#footer img { /* Imagen del Pie de Página */
+#sectores div{
+    display: inline-block;
+}
+
+#sector_1 {
+    position: absolute;
+    left: 0px;
+    padding: 30px 20px;
+}
+
+#sector_2 {
+    padding-top: 15px;
+}
+
+#sector_3 {
+    position: absolute;
+    right: 0px;
+    padding: 30px 20px;
+}
+
+#footer-content img { /* Imagen del Pie de Página */
     text-align: center;
     height: auto;
-
-    width: 200px;
+    width: 170px;
     margin-left: 300px;
     margin-right: 350px;
 }

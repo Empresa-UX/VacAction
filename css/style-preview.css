@@ -1,0 +1,74 @@
+/* ----------------------------------------------- Cuerpo de la Página ----------------------------------------------- */
+#body {
+    margin: 0;
+    padding: 0;
+}
+/* ------------------------------------------------- Cuerpo del header ------------------------------------------------- */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: darkslategray;
+    color: white;
+    min-height: 1vh;
+    width: 100%;
+    padding: 5px 0;
+}
+
+#header div {
+    display: inline-block;
+}
+
+/* ------------------------------------------------- Cuerpo sector_1 ------------------------------------------------- */
+#sector_1 {
+    position: absolute;
+    left: 0px;
+    padding: 9px 20px;
+}
+#sector_1 img {
+    height: 30px;
+    width: auto;
+    margin-right: 20px;
+}
+/* ------------------------------------------------- Cuerpo sector_2 ------------------------------------------------- */
+#sector_2 {
+    position: relative;
+    left: 50px;
+    display: flex;
+    align-items: center;
+    
+}
+
+#sector_2 a {
+    text-decoration-line: none;
+    color: white;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px 30px;
+}
+
+#sector_2 p {
+    display: inline-block;
+}
+/* ------------------------------------------------- Cuerpo sector_3 ------------------------------------------------- */
+#sector_3 {
+    position: absolute;
+    right: 0px;
+    margin: 9px 20px;
+}
+
+#sector_3 button{
+    border: none;
+    background: transparent;
+    caret-color: transparent;
+    cursor: pointer;
+}
+
+#sector_3 img {
+    height: 30px;
+    width: auto;
+}
+#flecha_icono img{
+    height: 15px;
+    margin-bottom: 6px;
+}
