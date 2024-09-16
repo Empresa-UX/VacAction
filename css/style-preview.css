@@ -21,7 +21,7 @@
     background-color: darkslategray;
     color: white;
     width: 100%;
-    padding: 5px 0;
+    padding: 1px;
 }
 
 #header div {
@@ -31,8 +31,8 @@
 /* ------------------------------------------------- Cuerpo sector_1 ------------------------------------------------- */
 #sector_1_header {
     position: relative;
-    top: 4px;
-    left: 0px;
+    top: 10px;
+    left: 15px;
     padding: 9px 20px;
 }
 #sector_1_header img {
@@ -51,31 +51,78 @@
 /* ------------------------------------------------- Cuerpo sector_2 ------------------------------------------------- */
 #sector_2_header {
     position: relative;
-    bottom: 6px;
     display: flex;
     align-items: center;
 }
 
 #sector_2_header a {
     text-decoration-line: none;
-    color: white;
+    color: rgb(190, 178, 178);
+    background-color: color(srgb red green blue);
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px 40px;
 }
 
 #sector_2_header a:hover{
-    color: darkcyan;
+    color: white;
+    padding: 26px 40px;
+    margin: 0px 0px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 #sector_2_header p {
     display: inline-block;
 }
+
+/* ------------------------------------------------- Cuerpo buscador ------------------------------------------------- */
+#Buscador {
+    display: flex;
+    position: relative;
+    left: 150px;
+    justify-content: center;
+}
+
+#Buscador input[type="text"]{
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 10px;
+}
+
+#Buscador button {
+    height: 40px;
+    width: 40px;
+    background-color: darkslategray;
+    border: 1px solid darkslategray;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#Buscador button img{
+    display: flex;
+    height: 10px;
+    width: auto;
+}
+
+#Buscador button:hover {   
+    box-shadow: 15px;
+}
+
+@media (max-width: 600px) {
+    .Buscador input[type="text"] {
+        width: 200px;
+    }
+}
+
+
 /* ------------------------------------------------- Cuerpo sector_3 ------------------------------------------------- */
 #sector_3_header {
     position: absolute;
     right: 0px;
     margin: 13px 20px;
+    top: 8px;
 }
 
 #sector_3_header button{
@@ -86,6 +133,7 @@
 }
 
 #sector_3_header img {
+    bottom: 5px;
     height: 30px;
     width: auto;
 }
