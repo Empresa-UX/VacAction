@@ -1,18 +1,26 @@
 /* ----------------------------------------------- Cuerpo de la Página ---------------------------------------------- */
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
 
 body { /* Contenido general */
     margin: 0;
     padding: 0;
+
     display: flex;
-    flex-direction: column;
+    flex-direction: column ;
+    min-height: 100vh;
+    
     background-image: url("/img/backgrounds/background (9).jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100% 100%;
-    min-height: 100vh;
+    background-size: cover;
 }
 
 /* ------------------------------------------------ Cuerpo deL Login ------------------------------------------------ */
+
+/* Contenido general */
 
 #login-content { /* Contenido Login */
     
@@ -23,42 +31,33 @@ body { /* Contenido general */
     width: 25%;
     height: 40%;
     
-    color: white;
     text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
     background-color: rgb(10, 10, 10);
     border-radius: 60px;
 
-    padding: 30px 30px 30px 30px;
+    padding: 30px;
 }
 
 #login-content img { /* Imagen superior del Login */
     margin-top: 20px;
+
     width: 30%;
     height: 20%;
 }
 
 #login-content h3 { /* Subtítulo del Login */
     font-size: 20px;
-    text-align: center;
-
-    margin-top: 5px;
 }
 
-#register-content label {
-    display: block;
-    margin-top: 7px;
-}
-
-#login-content .traveler { /* Span del subtítulo */
+#login-content .green-letter { /* Span del subtítulo */
     transition: color 0.4s;
 }
 
 #login-content label {
     display: block;
+    
     margin-top: 7px;
-    text-align: center;
 }
 
 #login-content input { /* Input's generales del Login */
@@ -72,38 +71,25 @@ body { /* Contenido general */
     height: 20px;
     width: 100%;
 
-    color: white;
-
-    margin-top: 10px;
+    margin-top: 5px;
     margin-bottom: 7px;
 
     transition: border-bottom 0.4s, box-shadow 0.4s;
 }
 
-#login-content input[type="submit"] { /* Input Submit */
-    width: auto;
-    cursor: pointer;
-
-    margin: 7px 0px 7px 0px;
-    padding: 0px 0px 5px 0px;
-
-    text-align: center;
-    font-size: 15px;
-
-    display: inline;
-}
-
 #login-content .remember-session {
     display: flex;
-    margin: 10px 0px 5px 0px;
+    margin: 10px 0px 10px;
+
+    text-align: left;
 }
 
-#login-content input[type="checkbox"] {
+#login-content .remember-session input { /* Input Checkbox*/
     margin: 0;
     width: auto;
 }
 
-#login-content label[for="checkbox"] {
+#login-content .remember-session label {
     margin: 0;
     padding: 0px 0px 0px 5px;
 
@@ -111,27 +97,20 @@ body { /* Contenido general */
     display: inline-block;
 }
 
-#login-content input[type="checkbox"]:hover, /* Hover del Input Checkbox */
-#login-content input[type="checkbox"]:focus { /* Focus del Input Checkbox */
-    box-shadow: none;
-    outline: none;
+#login-content .submit input { /* Input Submit */
+    width: auto;
     cursor: pointer;
-}
 
-#login-content input:hover { /* Hover de los Input's */
-    border-bottom: 1px solid rgb(61, 175, 175);
-    box-shadow: 0 1.5px 0 0 rgb(61, 175, 175);
-    border-radius: 2px;
-}
+    margin: 7px 0px 7px;
+    padding: 0;
 
-#login-content h3:hover .traveler { /* Hover del Submit*/
-    color: rgb(61, 175, 175);
+    font-size: 15px;
 }
-
 
 #login-content .googleAcount p {
-    margin: 7px 0px 7px 0px;
-    color: white;
+    width: auto;
+
+    margin: 7px 0px 7px;
 }
 
 #login-content .googleAcount button{
@@ -139,27 +118,44 @@ body { /* Contenido general */
     background: transparent;
     caret-color: transparent;
     cursor: pointer;
+
+    margin: 10px 0px 10px 0px;
 }
 
-#login-content .googleAcount img{
-    margin: 7px 0px 7px 0px;
-    height: 30px;
+#login-content .googleAcount button img{
+    margin: 0;
 
-    width: auto;
+    width: 30px;
+    height: 30px;
 }
 
 #login-content .enlaceCTA a {
     display: inline-block;
     width: 49%;
 
-    margin: 7px 0px 7px 0px;
     text-decoration: none;
-
     font-size: 12px;
-    color: white;
 
-    transition: color 0.4s; /* Añadir transición para suavidad */
+    transition: color 0.4s;
 }
+
+/* Hover y Focus del Formulario */
+
+#login-content .remember-session input:hover, /* Hover del Input Checkbox */
+#login-content .remember-session input:focus { /* Focus del Input Checkbox */
+    box-shadow: none;
+    cursor: pointer;
+}
+
+#login-content input:hover { /* Hover de los Input's */
+    border-bottom: 1px solid rgb(61, 175, 175);
+    box-shadow: 0 1.5px 0 0 rgb(61, 175, 175);
+}
+
+#login-content h3:hover .green-letter { /* Hover del Submit*/
+    color: rgb(61, 175, 175);
+}
+
 
 #login-content .enlaceCTA a:hover {
     color: rgb(61, 175, 175); /* Cambiar color al hacer hover */
@@ -167,53 +163,20 @@ body { /* Contenido general */
 
 /* -------------------------------------------- Código del Pie de Página -------------------------------------------- */
 
-#footer-content { /* Contenido general */
-    /* margin: 0px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    background-color: rgb(20, 20, 20);
-    color: white;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px 0;
-    min-height: 15px;
-    margin-top: auto;
-    align-items: center; */
-
-    margin: 0px;
+footer {
+    margin: 0;
     display: flex;
     justify-content: space-between;
     width: 100%;
     background-color: rgb(20, 20, 20);
-    color: white;
-    flex-direction: column;
+    flex-direction: row;
     padding: 10px 0;
     min-height: 15vh;
     margin-top: auto;
     align-items: center;
 }
-
-#sectores div{
+footer div{
     display: inline-block;
-    top: 20px;
-    margin: 20px 50px;
-}
-
-#sector_1 {
-    padding: 30px 20px;
-}
-
-#sector_2 {
-    padding-top: 15px;
-}
-
-#sector_3 {
-    padding: 30px 20px;
-}
-
-#footer-content img { /* Imagen del Pie de Página */
-    height: auto;
-    width: 170px;
+    width: 100%;
+    text-align: center;
 }

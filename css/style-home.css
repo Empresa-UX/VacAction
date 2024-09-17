@@ -5,45 +5,63 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Courier;
+    font-weight: 400;
+    font-style: normal;
+    background-color: rgb(145, 146, 146);
+    color: #333;
+    height: 1000px;
     display: flex;
     flex-direction: column;
+  }
+
+.logo img {
+    display: b;
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
 }
 
 /* Header de arriba */
 
 header {
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
 }
-
-.logo img {
-    margin-top: 3px;
-    width: 50px;
-    height: 50px;
+h1{
+    display: block;
+    font-size: 24px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 15px;
 }
 
-nav a {
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-weight: bold;
 }
+  
 
 /* imagen centro */
 
 .imagen{
     display: flex;
-    justify-content: center;
+    justify-content: left;
     margin: 40px;
 }
 
@@ -57,45 +75,60 @@ nav a {
 
 main {
     display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    flex-grow: 1;
+    justify-content: center;
+    margin: 20px;
 }
 
-.welcome {
-    width: 60%;
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
 }
 
-.vacation-options {
-    width: 30%;
-    background-color: #e9e9e9;
+section {
+    background-color: white;
     padding: 20px;
+    margin: 10px;
     border-radius: 8px;
-}
-
-.vacation-options h2 {
-    margin-bottom: 10px;
-}
-
-.vacation-options button {
-    padding: 10px 20px;
-    background-color: #007BFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+  }
+.vacaciones button, .pendientes button, .historial button {
+    background-color: #000000;
     color: white;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 10px; 
 }
+.vacaciones button:hover, .pendientes button:hover, .historial button:hover {
+    background-color: rgb(255, 3, 3);
+  }
 
-/* Pie de pagina */
+aside {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    width: 20%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    right: 20px;
+    top: 100px;
+}
 
 footer {
-    background-color: #333;
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgb(20, 20, 20);
     color: white;
-    text-align: center;
-    padding: 10px;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
-}
+    flex-direction: column;
+    padding: 10px 0;
+    margin-top: auto;
+    align-items: center;
+  }

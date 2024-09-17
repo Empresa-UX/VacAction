@@ -13,7 +13,7 @@
 }
 /* ------------------------------------------------- Cuerpo del header ------------------------------------------------- */
 #header {
-    position: sticky;
+    position: relative;
     top: 0px;
     display: flex;
     justify-content: space-between;
@@ -150,6 +150,79 @@
     height: 15px;
     margin-bottom: 6px;
 }
+
+/* ------------------------------------------------- Contenido ------------------------------------------------- */
+#contenido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    margin: 10px 50px;
+    gap: 50px;
+    position: relative;
+}
+/* ------------------------------------------------- sub nivel 1 ------------------------------------------------- */
+#sector_1_contenido{
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgb(25, 22, 22), -2px -2px 4px rgb(45, 45, 71);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    animation: movefromright 2s ease-out forwards;
+    opacity: 0; 
+}
+
+#sector_1_contenido p {
+    margin: 15px;
+}
+
+#sector_2_contenido {
+    padding: 0px;
+    margin: 0px 0px;
+    animation: moveFromRight 2s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes movefromright{
+    0% {
+        transform: translatey(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translatey(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveFromRight {
+    0% {
+        transform: translatey(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translatey(0); 
+        opacity: 1;
+    }
+}
+
+#sector_2_contenido img{
+    height: auto;
+    width: 600px;
+    padding: 0px;
+}
+
+/* ------------------------------------------------- sub nivel 2 ------------------------------------------------- */
+#primera_vista_parte_superior {
+    font-size: 40px;
+}
+
+#segunda_vista_parte_inferior {
+    font-size: 20px;
+    text-align: center;
+}
+
 /* ------------------------------------------------- footer ------------------------------------------------- */
 #footer {
     margin: 0px;
@@ -169,8 +242,4 @@
     top: 20px;
     margin: 20px 100px;
     height: auto;
-}
-/* ------------------------------------------------- Contenido ------------------------------------------------- */
-#contenido {
-    margin: 600px 30px;
 }
