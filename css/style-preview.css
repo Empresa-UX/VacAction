@@ -4,7 +4,7 @@
     padding: 0;
     display: flex;
     flex-direction: column;
-    height: 1000px;
+    height: 5000px;
     background-image: url("/img/backgrounds/background-preview.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -13,7 +13,7 @@
 }
 /* ------------------------------------------------- Cuerpo del header ------------------------------------------------- */
 #header {
-    position: relative;
+    position: sticky;
     top: 0px;
     display: flex;
     flex-direction: column;
@@ -23,6 +23,8 @@
     color: white;
     width: 100%;
     padding: 10px 0px;
+    z-index: 1000;
+    
 }
 
 #header div {
@@ -48,7 +50,7 @@
 }
 
 #sector_1_header img:active{
-    height: 25;
+    height: 35;
     width: auto;
     margin-bottom: 1px;
     margin-top: 3px;
@@ -115,17 +117,34 @@
 }
 
 /* ------------------------------------------------- Contenido ------------------------------------------------- */
-#contenido {
+#contenido_1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 70vh;
-    margin: 10px 50px;
+    height: 75vh;
     gap: 50px;
-    position: relative;
+    z-index: 999;
+    margin-bottom: 20vh;
 }
-/* ------------------------------------------------- sub nivel 1 ------------------------------------------------- */
-#sector_1_contenido{
+#contenido_2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darkslategray;
+    height: 500px;
+    width: 100%;
+    z-index: 999;
+    color: white;
+}
+
+/* ------------------------------------------------- contenido_1_seccion_1 y subniveles ------------------------------------------------- */
+#contenido_1_seccion_1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#sector_1_CS_1{
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 4px rgb(25, 22, 22), -2px -2px 4px rgb(45, 45, 71);
     display: flex;
@@ -137,11 +156,11 @@
     opacity: 0; 
 }
 
-#sector_1_contenido p {
+#sector_1_CS_1 p {
     margin: 15px;
 }
 
-#sector_2_contenido {
+#sector_2_CS_1 {
     padding: 0px;
     margin: 0px 0px;
     animation: moveFromRight 2s ease-out forwards;
@@ -170,20 +189,60 @@
     }
 }
 
-#sector_2_contenido img{
+#sector_2_CS_1 img{
     height: auto;
     width: 600px;
     padding: 0px;
 }
 
-/* ------------------------------------------------- sub nivel 2 ------------------------------------------------- */
-#primera_vista_parte_superior {
+#primera_vista_parte_superior_CS_1 {
     font-size: 40px;
 }
 
-#segunda_vista_parte_inferior {
+#segunda_vista_parte_inferior_CS_1 {
     font-size: 20px;
     text-align: center;
+}
+/* ------------------------------------------------- contenido_2_seccion_1 y subniveles ------------------------------------------------- */
+#contenido_2_seccion_1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#contenido_2_seccion_1 p {
+    margin: 20px 20px;
+}
+
+#listas_CS_2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 300px;
+}
+
+#titulo_sector_1_CS_2 {
+    font-size: 40px;
+}
+
+#titulo_lista_1_sector_1_CS_2 p{
+    font-size: 30px;
+}
+
+#titulo_lista_2_sector_1_CS_2 p{
+    font-size: 30px;
+}
+
+#sector_1_CS_2 ul{
+    font-size: 20px;
+    padding: 0px;
+}
+
+#sector_2_CS_2 ul{
+    font-size: 20px;
+    padding: 0px;
 }
 
 /* ------------------------------------------------- footer ------------------------------------------------- */
