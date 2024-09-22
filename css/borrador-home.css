@@ -1,5 +1,5 @@
 :root{
-    --text-color--: #df927d;
+    --text-color--: #25c36f;
     --text-color-blend--: #03055b;
     --back-up-color--: #e7faf9;
 }
@@ -17,10 +17,10 @@ body{
     background-color: #a5a6a5;
 }
 header{
-    background: url(https://img.freepik.com/free-photo/high-angle-shot-beautiful-beach-breathtaking-sunset-sky_181624-26026.jpg?w=740&t=st=1726942696~exp=1726943296~hmac=5a43cd15f4fe2660ec40dc99b0736d0ed58c2063b25c485aaec4be1b71496316);
+    background: url(https://img.freepik.com/free-photo/beautiful-skyscape-daytime_23-2149265552.jpg?t=st=1726962724~exp=1726966324~hmac=5626e0ed2109580d29e12c996f9bffb0c2d6fe9b5248b0041a236d416788f4c7&w=740);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 nav{
     width: 100%;
