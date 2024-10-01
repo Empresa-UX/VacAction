@@ -7,7 +7,7 @@ window.addEventListener('load' , () => {
         var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     }
-    
+
     function validarPassword(password) {
         return password.length >= 8;
     }

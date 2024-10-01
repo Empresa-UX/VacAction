@@ -21,7 +21,7 @@
             <img src="../img/icons_logo/icon_white2.png" alt="VacAction_logo">
             <h3>Join Our <span class="community">Community</span> Now</h3>
 
-            <form method="POST">
+            <form method="POST" action="conection.php">
                 <label for="fullName">Full Name</label>
                 <input type="text" id="fullName" name="fullName" autocomplete="off" required>
         
