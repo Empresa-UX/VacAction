@@ -6,7 +6,7 @@ $password = "";
 $dbname = "vacaction";
 
 // Se crea la conexión a la base de datos usando el objeto mysqli.
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $username, $password, $dbname, 3307);
 
 // Se verifica si hubo un error al intentar conectar con la base de datos.
 if ($conn->connect_error) {
@@ -107,6 +107,7 @@ $cambio_fecha = $ultima_vacacion ? $ultima_vacacion['change_date'] : 'No disponi
                 <p>Fecha de finalización: <?php echo $fecha_fin_proxima_vacacion; ?></p>
                 <p>Razón: <?php echo $razon_proxima_vacacion; ?></p>
                 <p>Estado de la solicitud: <?php echo $estado_proxima_vacacion; ?></p>
+                <button>Ver Próximas Vacaciones</button>
             </div>
 
             <!-- Bloque para mostrar el historial de vacaciones -->

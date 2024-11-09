@@ -6,7 +6,7 @@ $password = "";
 $dbVacAction = "vacaction";
 
 // Se crea la conexión a la base de datos usando el objeto mysqli.
-$conn = new mysqli($servername, $username, $password, $dbVacAction);
+$conn = new mysqli($servername, $username, $password, $dbVacAction, 3307); // Agrega el puerto 3307 al final
 
 // Se verifica si hubo un error al intentar conectar con la base de datos.
 if ($conn->connect_error) {
