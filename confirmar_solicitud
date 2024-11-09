@@ -1,0 +1,21 @@
+<?php
+session_start();
+if (!isset($_SESSION['usuario_id'])) {
+    header('Location: login.php');
+    exit();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de Solicitud</title>
+</head>
+<body>
+    <h2>Solicitud de Vacaciones Enviada</h2>
+    <p>Tu solicitud de vacaciones ha sido enviada correctamente y está pendiente de revisión por un administrador.</p>
+    <a href="calendario.php">Volver al Calendario</a>
+</body>
+</html>

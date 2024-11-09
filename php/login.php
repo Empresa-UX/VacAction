@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- http://127.0.0.1:5500/html/login.html -->
+    <!-- http://localhost/VacAction/php/login.php -->
 
     <link rel="stylesheet" href="../css/style-login.css">
     <link rel="icon" href="../img/icons_logo/icon_black.ico" type="image/x-icon">

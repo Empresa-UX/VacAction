@@ -6,132 +6,103 @@
     <title>Calendario de Vacaciones</title>
 
     <!-- FullCalendar CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.3/main.min.css" rel="stylesheet">
-
-    <!-- FullCalendar JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.3/main.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
 
     <!-- Estilos personalizados -->
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f1f3f4;
+        body, html {
             margin: 0;
             padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+        #calendar-container {
+            flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            padding: 10px;
+            background-color: #f1f3f4;
         }
-        #calendar-container {
-            width: 90%;
-            max-width: 1000px;
+        #calendar {
+            width: 100%;
+            max-width: 1400px;
+            height: 90vh;
             background: #fff;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        #calendar {
-            padding: 20px;
+            padding: 10px;
         }
 
-        /* Barra lateral estilo Google Calendar */
-        #sidebar {
-            width: 200px;
+        #buttons-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
             padding: 10px;
-            background-color: #ffffff;
-            box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px 0 0 8px;
+            background-color: #fff;
         }
         .button {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0;
+            flex: 1;
+            padding: 15px 20px; /* Aumenta el padding para hacer los botones más grandes */
+            max-width: 250px; /* Permite que cada botón sea más ancho */
             text-align: center;
             background-color: #4285f4;
             color: #fff;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             cursor: pointer;
-            font-size: 14px;
+            font-size: 18px; /* Aumenta el tamaño de la fuente */
+            font-weight: bold; /* Hace el texto más visible */
         }
         .button:hover {
             background-color: #357ae8;
-        }
-
-        /* Estilo de la vista semanal */
-        .fc-col-header-cell {
-            text-align: center;
-            font-weight: bold;
-            background-color: #4285f4;
-            color: white;
-            padding: 10px;
-            border-right: 1px solid #ddd;
-            border-bottom: 2px solid #ddd;
-        }
-
-        /* Separación entre días en la vista semanal */
-        .fc-daygrid-day {
-            border-right: 1px solid #ddd;
-            padding: 10px;
-            box-sizing: border-box;
-        }
-
-        /* Línea en la parte inferior de cada celda (más visible) */
-        .fc-daygrid-day-frame {
-            border-bottom: 2px solid #ddd;
-        }
-
-        /* Estilo de las celdas de cada día */
-        .fc-daygrid-day-top {
-            text-align: center;
-            background-color: #f4f4f4;
-            padding: 10px;
-            border-bottom: 2px solid #ddd;
-        }
-
-        /* Asegurarse que el calendario tiene suficiente espacio */
-        .fc-timegrid-col {
-            padding: 5px;
-        }
-
-        /* Mostrar las líneas de separación más fuertes */
-        .fc-daygrid-day-frame {
-            border-right: 1px solid #ddd;
-        }
-
-        .fc-daygrid-day-top {
-            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
-<div id="sidebar">
-    <h3 style="color: #4285f4; text-align: center;">Acciones</h3>
-    <button class="button" onclick="calendar.changeView('dayGridMonth')">Vista Mensual</button>
-    <button class="button" onclick="calendar.changeView('timeGridWeek')">Vista Semanal</button>
-    <button class="button" onclick="calendar.changeView('timeGridDay')">Vista Diaria</button>
-</div>
-
 <div id="calendar-container">
-    <h2 style="text-align: center; color: #4285f4; padding-top: 10px;">Calendario de Vacaciones</h2>
     <div id="calendar"></div>
 </div>
 
+<div id="buttons-container">
+    <button class="button" onclick="changeCalendarView('timeGridDay')">Vista Diaria</button>
+    <button class="button" onclick="changeCalendarView('timeGridWeek')">Vista Semanal</button>
+    <button class="button" onclick="changeCalendarView('dayGridMonth')">Vista Mensual</button>
+    <button class="button" onclick="solicitarVacaciones()">Solicitar Vacaciones</button>
+</div>
+
+<!-- FullCalendar JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+
 <script>
+    let calendar;
+
+    function changeCalendarView(view) {
+        calendar.changeView(view);
+    }
+
+    // Función para redirigir a la página del formulario
+    function solicitarVacaciones() {
+        // Redirige a la página donde el usuario podrá solicitar sus vacaciones
+        window.location.href = 'solicitar_vacaciones.php';
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
         const calendarEl = document.getElementById('calendar');
 
-        const calendar = new FullCalendar.Calendar(calendarEl, {
-            initialView: 'timeGridWeek',  // Vista semanal
+        calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'timeGridWeek',
             headerToolbar: {
                 left: 'prev,next today',
                 center: 'title',
                 right: 'timeGridDay,timeGridWeek,dayGridMonth'
             },
-            themeSystem: 'standard', // Usa el sistema de temas de FullCalendar
+            themeSystem: 'standard',
             selectable: true,
-            editable: true, // Permitir arrastrar eventos
+            editable: true,
             selectMirror: true,
             events: [
                 {
@@ -148,14 +119,12 @@
                 }
             ],
             select: function(info) {
-                // Muestra un mensaje o abre un formulario al seleccionar un rango
                 alert(`Has seleccionado desde ${info.startStr} hasta ${info.endStr}`);
             },
             eventClick: function(info) {
-                // Acciones cuando se hace clic en un evento
                 alert(`Vacaciones: ${info.event.title}`);
             },
-            dayHeaderFormat: { weekday: 'long' },  // Formato de los días de la semana
+            dayHeaderFormat: { weekday: 'long' },
         });
 
         calendar.render();
