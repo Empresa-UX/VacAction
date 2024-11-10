@@ -1,81 +1,57 @@
 <?php
-session_start(); // Inicia la sesión
+session_start();
 
-// Verifica si ya hay una sesión activa
 if (isset($_SESSION['usuario_id'])) {
-    header("Location: calendario.php"); // Si la sesión ya está activa, redirige al calendario
+    header("Location: calendario.php");
     exit();
 }
 
-// Conexión a la base de datos
-$servername = "localhost";  // Cambia esto si tu servidor de base de datos es diferente
-$username = "root";         // Tu nombre de usuario de MySQL
-$password = "";             // Tu contraseña de MySQL
-$dbname = "vacaction_db";      // El nombre de tu base de datos
-
-// Crea la conexión
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "vacaction_db";
 $conn = mysqli_connect($servername, $username, $password, $dbname, 3307);
 
 if (!$conn) {
-    echo "<script>console.log('Conexión fallida: " . mysqli_connect_error() . "');</script>";
-    die("Conexión fallida: " . mysqli_connect_error()); // Agrega manejo de errores en la conexión
+    die("Conexión fallida: " . mysqli_connect_error());
 }
 
-// Si el formulario fue enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Obtén las credenciales del formulario
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    // Depuración: Verificar que los datos se reciban correctamente
-    echo "<script>console.log('Email: $email, Password: $password');</script>"; // Enviar mensaje a consola
-
-    // Prepara y ejecuta la consulta para verificar el usuario
     $query = "SELECT id, email, password, rol FROM usuarios WHERE email = ?";
-
     if ($stmt = mysqli_prepare($conn, $query)) {
-        mysqli_stmt_bind_param($stmt, "s", $email);  // Vincula el email
-
+        mysqli_stmt_bind_param($stmt, "s", $email);
         mysqli_stmt_execute($stmt);
         mysqli_stmt_store_result($stmt);
 
-        // Depuración: Verificar si el usuario existe en la base de datos
         if (mysqli_stmt_num_rows($stmt) == 1) {
-            mysqli_stmt_bind_result($stmt, $user_id, $user_email, $user_password, $rol); // Añadir el rol
+            mysqli_stmt_bind_result($stmt, $user_id, $user_email, $user_password, $rol);
             mysqli_stmt_fetch($stmt);
 
-            // Depuración: Verificar los valores obtenidos de la base de datos
-            echo "<script>console.log('ID: $user_id, Email: $user_email, Password: $user_password, Rol: $rol');</script>"; // Enviar mensaje a consola
-
-            // Verifica si la contraseña ingresada coincide con la almacenada en la base de datos
             if (password_verify($password, $user_password)) {
-                // Guarda el ID, email y rol del usuario en la sesión
                 $_SESSION['usuario_id'] = $user_id;
                 $_SESSION['usuario_email'] = $user_email;
-                $_SESSION['rol'] = $rol; // Almacena el rol
+                $_SESSION['rol'] = $rol;
 
-                // Si la opción "Remember me" está marcada, guarda la sesión
                 if (isset($_POST['checkbox'])) {
-                    setcookie("usuario_id", $user_id, time() + (86400 * 30), "/"); // Guarda cookie por 30 días
+                    setcookie("usuario_id", $user_id, time() + (86400 * 30), "/");
                     setcookie("usuario_email", $user_email, time() + (86400 * 30), "/");
                 }
 
-                // Redirige al calendario
                 header("Location: calendario.php");
                 exit();
             } else {
-                echo "<script>console.log('Credenciales incorrectas.');</script>"; // Enviar mensaje a consola
+                echo "<script>console.log('Credenciales incorrectas.');</script>";
             }
         } else {
-            echo "<script>console.log('Credenciales incorrectas.');</script>"; // Enviar mensaje a consola
+            echo "<script>console.log('Credenciales incorrectas.');</script>";
         }
 
         mysqli_stmt_close($stmt);
-    } else {
-        echo "<script>console.log('Error en la consulta a la base de datos.');</script>"; // Enviar mensaje a consola
     }
-
-    mysqli_close($conn); // Cierra la conexión a la base de datos
+    mysqli_close($conn);
 }
 ?>
 
@@ -85,20 +61,145 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style-login.css">
-    <link rel="icon" href="../img/icons_logo/icon_black.ico" type="image/x-icon">
     <title>VacAction | Login</title>
+    <style>
+        * {
+            font-family: 'Arial', sans-serif;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #e0f7fa;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #login-content {
+            background-color: #0288d1;
+            padding: 40px;
+            border-radius: 15px;
+            width: 350px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+        }
+
+        #login-content img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        #login-content h3 {
+            color: #ffffff;
+            font-size: 24px;
+            margin-bottom: 30px; /* Separación extra */
+        }
+
+        .green-letter {
+            color: #4dd0e1;
+        }
+
+        .labe-input {
+            margin-top: 20px; /* Separación entre secciones */
+        }
+
+        .labe-input label {
+            color: #e0f7fa;
+            font-weight: bold;
+            margin-top: 20px; /* Margen superior adicional */
+            display: block;
+        }
+
+        .labe-input input {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0 20px; /* Más separación entre campos */
+            border: none;
+            border-bottom: 2px solid #ffffff;
+            background-color: transparent;
+            color: #ffffff;
+        }
+
+        .labe-input input:focus {
+            border-bottom: 2px solid #4dd0e1;
+            outline: none;
+        }
+
+        .remember-session {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px; /* Separación adicional abajo */
+            font-size: 14px;
+        }
+
+        .remember-session input {
+            margin-right: 10px;
+        }
+
+        .submit {
+            margin-top: 20px; /* Separación antes del botón */
+        }
+
+        .submit input {
+            background-color: #4dd0e1;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px; /* Separación adicional */
+        }
+
+        .submit input:hover {
+            background-color: #0277bd;
+        }
+
+        .enlaceCTA {
+            margin-top: 30px; /* Separación entre enlaces */
+        }
+
+        .enlaceCTA a {
+            font-size: 11px;
+            color: #e0f7fa;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .enlaceCTA a:hover {
+            color: #4dd0e1;
+        }
+
+        footer {
+            background-color: #0288d1;
+            padding: 15px 0;
+            text-align: center;
+            color: #ffffff;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+    </style>
 </head>
 
 <body>
     <section id="login-content">
-        <img src="../img/icons_logo/icon_white2.png" alt="VacAction logo">
         <h3>Welcome, <span class="green-letter">traveler.</span></h3>
 
-        <form method="POST" action="login.php">
+        <form method="POST" action="">
             <div class="labe-input">
                 <label for="email">Email Address</label>
-                <input type="email" name="email" id="email" autocomplete="off" required>
+                <input type="email" name="email" id="email" required>
 
                 <label for="password">Password</label>
                 <input type="password" name="password" id="password" required>
@@ -110,33 +211,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
 
             <div class="submit">
-                <input type="submit" name="submit" id="submit" value="Login in">
-            </div>
-
-            <div class="googleAcount">
-                <p>Or sign in with:</p>
-                <button onclick="window.location.href='/auth/google'">
-                    <img src="../img/content/google-logo.png" alt="Google logo" />
-                </button>
+                <input type="submit" name="submit" value="Log in">
             </div>
 
             <div class="enlaceCTA">
-                <a href="../html/forgot.php" name="fotgot">Forgot password?</a>
-                <a href="../html/register.php" name="register">Don't have an account?</a>
+                <a href="#">Forgot password?</a>
+                <a href="#">Don't have an account?</a>
             </div>
         </form>
     </section>
 
-    <footer id="footer">
-        <div>
-            <p>Derechos reservados : VacAction ©</p>
-        </div>
-        <div>
-            <p>Derechos reservados : VacAction ©</p>
-        </div>
-        <div>
-            <p>Derechos reservados : VacAction ©</p>
-        </div>
+    <footer>
+        <p>Derechos reservados : VacAction ©</p>
     </footer>
 </body>
+
 </html>

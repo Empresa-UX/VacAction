@@ -47,8 +47,6 @@ if ($result->num_rows > 0) {
             'status' => $row['estado']  // Se asegura de incluir el estado exacto
         ];
     }
-} else {
-    echo "No hay vacaciones registradas.";
 }
 
 $conn->close();
