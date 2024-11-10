@@ -1,0 +1,71 @@
+Usuarios insertados:
+Juan Perez
+
+Email: juan.perez@example.com
+Contraseña: admin123
+Maria Lopez
+
+Email: maria.lopez@example.com
+Contraseña: empleado123
+Carlos Garcia
+
+Email: carlos.garcia@example.com
+Contraseña: empleado456
+
+
+-- Crear la tabla 'usuarios' que almacenará la información básica de los usuarios.
+CREATE TABLE usuarios (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    rol ENUM('admin', 'empleado') DEFAULT 'empleado',
+    fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Crear la tabla 'vacaciones' para gestionar las solicitudes de vacaciones.
+CREATE TABLE vacaciones (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    usuario_id INT,
+    fecha_inicio DATE NOT NULL,
+    fecha_fin DATE NOT NULL,
+    estado ENUM('pendiente', 'aprobado', 'rechazado') DEFAULT 'pendiente',
+    comentario_admin TEXT,
+    fecha_solicitud TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
+);
+
+-- Crear la tabla 'roles_permisos' que define qué permisos tiene cada rol (admin, empleado).
+CREATE TABLE roles_permisos (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    rol ENUM('admin', 'empleado') NOT NULL,
+    permiso VARCHAR(100) NOT NULL
+);
+
+-- Insertar permisos básicos para los roles (esto es un ejemplo, puedes añadir más permisos si lo deseas).
+INSERT INTO roles_permisos (rol, permiso) VALUES 
+('admin', 'ver_vacaciones'),
+('admin', 'aprobar_vacaciones'),
+('empleado', 'ver_vacaciones'),
+('empleado', 'solicitar_vacaciones');
+
+-- Crear la tabla 'historial_vacaciones' para llevar un registro de los cambios en las solicitudes de vacaciones.
+CREATE TABLE historial_vacaciones (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    vacaciones_id INT,
+    estado_anterior ENUM('pendiente', 'aprobado', 'rechazado'),
+    estado_nuevo ENUM('pendiente', 'aprobado', 'rechazado'),
+    cambiado_por INT, -- ID del admin que realizó el cambio
+    fecha_cambio TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    comentario TEXT,
+    FOREIGN KEY (vacaciones_id) REFERENCES vacaciones(id),
+    FOREIGN KEY (cambiado_por) REFERENCES usuarios(id)
+);
+
+-- Crear la tabla 'configuracion_vacaciones' para definir las reglas de las vacaciones en la empresa.
+CREATE TABLE configuracion_vacaciones (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    max_dias_anuales INT DEFAULT 30,
+    min_dias_por_solicitud INT DEFAULT 1,
+    max_dias_por_solicitud INT DEFAULT 15
+);
