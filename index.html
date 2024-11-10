@@ -1,13 +1,12 @@
-<!DOCTYPE html <html lang="en">
-
+<!DOCTYPE html> 
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- http://127.0.0.1:5500/index.html -->
-
-    <link rel="stylesheet" href="./css/style-preview.css">
-    <link rel="icon" href="../img/icons_logo/icon_black.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style-preview.css">
+    <link rel="icon" href="./img/icons_logo/icon_black.ico" type="image/x-icon">
     <title>VacAction | Software Engine</title>
 </head>
 
@@ -35,7 +34,7 @@
                 </a>
             </div>
             <div id="sector_3_header">
-                <button>
+                <button id="listas_sesion_sector_3_header" onclick="toggleDropdown()">
                     <div>
                         <img src="./img/content/icono-cuenta-3-removebg-preview.png" alt="Account icon">
                     </div>
@@ -43,6 +42,12 @@
                         <img src="./img/header/flecha-para-abajo.png" alt="Dropdown date">
                     </div>
                 </button>
+                <!-- Contenedor del menú desplegable -->
+                <div id="dropdown-menu">
+                    <a href="./php/login.php">Iniciar sesion</a>
+                    <a href="./php/v1/register.php">Registrarse</a>
+                    <a href="#">Ayuda</a>
+                </div>
             </div>
         </header>
     </section>
@@ -78,7 +83,7 @@
                 <p>Funcionalidades del sofware:</p>
             </p>
             </div>
-            <div id="Listas_CS_2">
+            <div id="listas_CS_2">
                 <div id="sector_1_CS_2">
                     <ul>
                         <div id="titulo_lista_1_sector_1_CS_2">
@@ -123,6 +128,7 @@
             </div>
         </footer>
     </section>
+    <script src="./js/scrip-preview.js"></script>
 </body>
 
 </html>

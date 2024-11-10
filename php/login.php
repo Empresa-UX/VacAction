@@ -127,7 +127,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </form>
     </section>
 
-    <footer>
+    <footer id="footer">
         <div>
             <p>Derechos reservados : VacAction ©</p>
         </div>

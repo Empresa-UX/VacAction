@@ -7,8 +7,8 @@
         <!-- http://127.0.0.1:5500/html/home.html -->
          
         <!-- CSS -->
-        <link rel="stylesheet" href="../css/style-home.css">
-        <link rel="icon" href="../img/icons_logo/icon_black.ico" type="image/x-icon">
+        <link rel="stylesheet" href="/css/style-home.css">
+        <link rel="icon" href="/img/icons_logo/icon_black.ico" type="image/x-icon">
 
         <title>VacAction | Home</title>
     </head>
@@ -17,7 +17,7 @@
             <div class="header-container">
                 <h1>Gestión de Vacaciones</h1>
                 <div class="logo">
-                    <img src="../img/icons_logo/icon_white2.png" alt="VacAction logo">
+                    <img src="/img/icons_logo/icon_white2.png" alt="VacAction logo">
                 </div>
                 <nav> 
                     <ul>
@@ -31,7 +31,7 @@
         </header>
         
         <div class="imagen">
-            <img src="../img/backgrounds/background (11).jpg" alt="Decorative image">
+            <img src="/img/backgrounds/background (11).jpg" alt="Decorative image">
         </div>
         <main>
             <section class="vacaciones">

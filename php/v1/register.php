@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbVacAction = "vacaction";
+$dbVacAction = "vacaction_db";
 
 // Se crea la conexión a la base de datos usando el objeto mysqli.
 $conn = new mysqli($servername, $username, $password, $dbVacAction, 3307); // Agrega el puerto 3307 al final
@@ -52,15 +52,15 @@ if (isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style-register.css">
-    <link rel="icon" href="../img/icons_logo/icon_black.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style-register.css">
+    <link rel="icon" href="/img/icons_logo/icon_black.ico" type="image/x-icon">
     <title>VacAction | Register</title>
 </head>
 
 <body>
     <section>
         <div id="register-content">
-            <img src="../img/icons_logo/icon_white2.png" alt="VacAction_logo">
+            <img src="/img/icons_logo/icon_white2.png" alt="VacAction_logo">
             <h3>Join Our <span class="community">Community</span> Now</h3>
 
             <form method="POST">
@@ -95,7 +95,7 @@ if (isset($_POST['submit'])) {
                 <p>Direccion: *************************</p>
             </div>
             <div id="sector_2">
-                <img src="../img/footer/icon_footer.png" alt="Social Media Links">
+                <img src="/img/footer/icon_footer.png" alt="Social Media Links">
             </div>
             <div id="sector_3">
                 <p>Derechos reservados : VacAction ©</p>

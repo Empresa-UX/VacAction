@@ -9,11 +9,11 @@ body { /* Contenido general */
     padding: 0;
     display: flex;
     flex-direction: column;
-    /* background-image: url("/img/backgrounds/blackground-login.jpg"); */
+    background-image: url("/img/backgrounds/blackground-login.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
+    background-size: 100% 100%;
+    min-height: 100vh;
 }
 
 /* ------------------------------------------------ Cuerpo deL Login ------------------------------------------------ */
@@ -23,7 +23,7 @@ body { /* Contenido general */
 #login-content { /* Contenido Login */
     
     margin: auto;
-    margin-top: 20px;
+    margin-top: 80px;
     margin-bottom: 180px;
 
     width: 25%;
@@ -31,7 +31,7 @@ body { /* Contenido general */
     
     text-align: center;
 
-    background-color: rgb(10, 10, 10);
+    background-color: rgb(105, 42, 42);
     border-radius: 60px;
 
     padding: 30px;
@@ -162,11 +162,12 @@ body { /* Contenido general */
 /* -------------------------------------------- Código del Pie de Página -------------------------------------------- */
 
 footer {
-    margin: 0;
+    margin: 0px;
     display: flex;
     justify-content: space-between;
     width: 100%;
     background-color: rgb(20, 20, 20);
+    color: white;
     flex-direction: row;
     padding: 10px 0;
     min-height: 15vh;
@@ -175,6 +176,7 @@ footer {
 }
 footer div{
     display: inline-block;
-    width: 100%;
-    text-align: center;
+    top: 20px;
+    margin: 20px 100px;
+    height: auto;
 }
