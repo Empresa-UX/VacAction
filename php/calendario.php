@@ -58,6 +58,7 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendario de Vacaciones</title>
+    <link rel="icon" href="/img/icons_logo/icon_black.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
     <style>
         /* Estilos */
@@ -110,10 +111,45 @@ $conn->close();
         .button:hover {
             background-color: #357ae8;
         }
+
+        header{
+            background-color: #4285f4;
+        }
+        header p{
+            display: flex;
+            position: relative;
+            color: white;
+            font-size: 10px;
+            right: -1450px;
+        }
+    
+        a img{
+            display: flex;
+            position: relative;
+            top: 10px;
+            height: 30px;
+            width: auto;
+            right: -1465px;
+        }
+
+        a img:active{
+            height: 25;
+            width: auto;
+            margin-bottom: 1px;
+            margin-top: 2.5px;
+            margin-right: 2px;
+        }
     </style>
 </head>
 <body>
-
+<header>
+    <!-- Botón de Cerrar Sesión -->
+     <div>
+        <a href="logout.php" class="logout-button"><img src="/img/content/icono-cuenta-3-removebg-preview.png" alt="Account icon"></a>
+        <p>Cerrar sesion</p>
+     </div>
+    
+</header>
 <div id="calendar-container">
     <div id="calendar"></div>
 </div>

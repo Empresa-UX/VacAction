@@ -4,7 +4,7 @@
     padding: 0;
     display: flex;
     flex-direction: column;
-    height: 2000px;
+    height: 1000px;
     background-image: url("/img/backgrounds/background-preview.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -166,12 +166,6 @@
     color: white;
 
 }
-/* Clase para oscurecer el fondo de la sección */
-.dark-overlay {
-    background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad como prefieras */
-    transition: background-color 0.5s ease; /* Suaviza la transición */
-}
-    
 /* ------------------------------------------------- contenido_1_seccion_1 y subniveles ------------------------------------------------- */
 #contenido_1_seccion_1{
     display: flex;
@@ -268,16 +262,6 @@
 
 #titulo_lista_2_sector_1_CS_2 p{
     font-size: 30px;
-}
-
-#sector_1_CS_2 ul{
-    font-size: 20px;
-    padding: 0px;
-}
-
-#sector_2_CS_2 ul{
-    font-size: 20px;
-    padding: 0px;
 }
 
 /* ------------------------------------------------- footer ------------------------------------------------- */

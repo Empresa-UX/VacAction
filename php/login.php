@@ -61,7 +61,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VacAction | Login</title>
+    <title>VacAction | Acceso</title>
+    <link rel="icon" href="/img/icons_logo/icon_black.ico" type="image/x-icon">
     <style>
         * {
             font-family: 'Arial', sans-serif;
@@ -72,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         body {
-            background-color: #e0f7fa;
+            background-color: #4dd0e1;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
@@ -194,29 +195,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
     <section id="login-content">
-        <h3>Welcome, <span class="green-letter">traveler.</span></h3>
+        <h3>Bienvenido, <span class="green-letter">Usuario.</span></h3>
 
         <form method="POST" action="">
             <div class="labe-input">
-                <label for="email">Email Address</label>
+                <label for="email">Direccion de Email</label>
                 <input type="email" name="email" id="email" required>
 
-                <label for="password">Password</label>
+                <label for="password">Constraseña</label>
                 <input type="password" name="password" id="password" required>
             </div>
 
             <div class="remember-session">
                 <input type="checkbox" name="checkbox" id="checkbox">
-                <label for="checkbox">Remember me</label>
+                <label for="checkbox">Permanecer conectado</label>
             </div>
 
             <div class="submit">
-                <input type="submit" name="submit" value="Log in">
+                <input type="submit" name="submit" value="Acceder">
             </div>
 
             <div class="enlaceCTA">
-                <a href="#">Forgot password?</a>
-                <a href="#">Don't have an account?</a>
+                <a href="./register.php">No tienes una cuenta?</a>
             </div>
         </form>
     </section>

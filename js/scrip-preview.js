@@ -23,20 +23,4 @@ function toggleDropdown() {
     const dropdown = document.getElementById("dropdown-menu");
     dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
 }
-// -------------------------------------------------codigo sin funcionar----------------------------------------------------
-// Selecciona la sección objetivo
-const targetSection = document.querySelector('#contenido_2');
 
-// Escucha el evento de scroll
-window.addEventListener('scroll', () => {
-    // Obtén la posición de la sección objetivo en relación con la ventana
-    const rect = targetSection.getBoundingClientRect();
-
-    // Si la sección está visible en el viewport, aplica la clase oscura
-    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-        targetSection.classList.add('dark-overlay');
-    } else {
-        // Quita la clase si la sección ya no está en vista
-        targetSection.classList.remove('dark-overlay');
-    }
-});
