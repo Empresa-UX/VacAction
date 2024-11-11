@@ -145,8 +145,12 @@ $conn->close();
 <header>
     <!-- Botón de Cerrar Sesión -->
      <div>
-        <a href="logout.php" class="logout-button"><img src="/img/content/icono-cuenta-3-removebg-preview.png" alt="Account icon"></a>
-        <p>Cerrar sesion</p>
+        <a href="logout.php" class="logout-button">
+            <?php
+                echo '<img src="../img/content/icono-cuenta-3-removebg-preview.png" alt="">';
+            ?>
+        </a>
+        <p>Cerrar sesion</p>    
      </div>
     
 </header>
