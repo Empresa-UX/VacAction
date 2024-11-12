@@ -1,0 +1,15 @@
+# Ignorar archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar dependencias de Composer (si se usa)
+/vendor/
+
+# Archivos de configuración local
+*.env
+
+# Archivos de log
+*.log
+
+# Archivos generados de build
+/dist/
