@@ -20,7 +20,7 @@ Bienvenido a **VacAction**, una solución de gestión de vacaciones diseñada pa
 ```bash
 git clone https://github.com/Empresa-UX/VacAction.git
 cd VacAction
-
+```
 ### 2. Configurar la Base de Datos
 1. Crear una base de datos llamada `vacaction_db`.
 2. Importar el archivo `vacaction_db.sql` en tu base de datos.
