@@ -1,24 +1,28 @@
 # VacAction
 
-📅 VacAction - Sistema de Gestión de Vacaciones para Empresas
-Bienvenido a VacAction, una solución de gestión de vacaciones diseñada para empresas que necesitan organizar y administrar las solicitudes de tiempo libre de su personal de manera efectiva. Este proyecto permite a los usuarios solicitar vacaciones y a los administradores revisar y aprobar dichas solicitudes a través de una interfaz amigable.
+# 📅 VacAction - Sistema de Gestión de Vacaciones para Empresas
 
-🌟 Características Principales
-Gestión de usuarios: Los empleados pueden iniciar sesión, ver sus vacaciones y solicitar tiempo libre.
-Roles de usuario: Permite roles de usuario y administrador, para diferentes niveles de acceso.
-Interfaz de calendario: Visualización de las vacaciones aprobadas en un calendario interactivo.
-Panel de administración: Los administradores pueden ver, aprobar o rechazar solicitudes de vacaciones.
-🛠️ Tecnologías Utilizadas
-Backend: PHP
-Base de Datos: MySQL
-Frontend: HTML, CSS, JavaScript
-Bibliotecas: FullCalendar para el calendario interactivo
-🚀 Instalación y Configuración
-1. Clonar el Repositorio
-bash
-Copy code
+Bienvenido a **VacAction**, una solución de gestión de vacaciones diseñada para empresas que necesitan organizar y administrar las solicitudes de tiempo libre de su personal de manera efectiva. Este proyecto permite a los usuarios solicitar vacaciones y a los administradores revisar y aprobar dichas solicitudes a través de una interfaz amigable.
+
+## 🌟 Características Principales
+- **Gestión de usuarios:** Los empleados pueden iniciar sesión, ver sus vacaciones y solicitar tiempo libre.
+- **Roles de usuario:** Permite roles de usuario y administrador, para diferentes niveles de acceso.
+- **Interfaz de calendario:** Visualización de las vacaciones aprobadas en un calendario interactivo.
+- **Panel de administración:** Los administradores pueden ver, aprobar o rechazar solicitudes de vacaciones.
+
+## 🛠️ Tecnologías Utilizadas
+- **Backend:** PHP
+- **Base de Datos:** MySQL
+- **Frontend:** HTML, CSS, JavaScript
+- **Bibliotecas:** FullCalendar para el calendario interactivo
+
+## 🚀 Instalación y Configuración
+
+### 1. Clonar el Repositorio
+```bash
 git clone https://github.com/Empresa-UX/VacAction.git
 cd VacAction
+
 2. Configurar la Base de Datos
 Crear una base de datos llamada vacaction_db.
 Importar el archivo vacaction_db.sql en tu base de datos.
@@ -55,3 +59,5 @@ Haz push a la rama (git push origin feature/nueva-caracteristica).
 Abre un Pull Request.
 📄 Licencia
 Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para obtener más detalles.
+
+¡Listo! Este README.md debería proporcionar una vista completa y organizada de tu proyecto VacAction para cualquier persona interesada.
