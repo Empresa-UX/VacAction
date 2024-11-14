@@ -1,15 +1,6 @@
 <?php
-// Conexión a la base de datos
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "vacaction_db";
 
-$conn = mysqli_connect($servername, $username, $password, $dbname, 3307);
-
-if (!$conn) {
-    die("Conexión fallida: " . mysqli_connect_error());
-}
+include("config.php"); // Incluye el archivo de conexión a la base de datos
 
 // Eliminar registros existentes
 $delete_query = "DELETE FROM usuarios"; // Elimina todos los registros en la tabla

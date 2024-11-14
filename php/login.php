@@ -6,15 +6,7 @@ if (isset($_SESSION['usuario_id'])) {
     exit();
 }
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "vacaction_db";
-$conn = mysqli_connect($servername, $username, $password, $dbname, 3307);
-
-if (!$conn) {
-    die("Conexión fallida: " . mysqli_connect_error());
-}
+include("config.php"); // Incluye el archivo de conexión a la base de datos
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];

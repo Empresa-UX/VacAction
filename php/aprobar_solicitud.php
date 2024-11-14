@@ -12,16 +12,7 @@ if (isset($_GET['id']) && isset($_GET['estado'])) {
     $id = $_GET['id'];
     $estado = $_GET['estado'];
 
-    // Conexión a la base de datos
-    $host = 'localhost';
-    $dbname = 'vacaction_db';
-    $username = 'root';
-    $password = '';
-    $conn = new mysqli($host, $username, $password, $dbname, 3307);
-
-    if ($conn->connect_error) {
-        die('Conexión fallida: ' . $conn->connect_error);
-    }
+    include("config.php"); // Incluye el archivo de conexión a la base de datos
 
     // Verificación de los valores posibles para estado
     if ($estado == 'aprobado' || $estado == 'rechazado') {

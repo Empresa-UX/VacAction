@@ -7,16 +7,7 @@ if (!isset($_SESSION['usuario_id']) || $_SESSION['rol'] !== 'admin') {
     exit();
 }
 
-// Conexión a la base de datos
-$host = 'localhost';
-$dbname = 'vacaction_db';
-$username = 'root';
-$password = '';
-$conn = new mysqli($host, $username, $password, $dbname, 3307);
-
-if ($conn->connect_error) {
-    die('Conexión fallida: ' . $conn->connect_error);
-}
+include("config.php"); // Incluye el archivo de conexión a la base de datos
 
 // Obtener todas las solicitudes pendientes
 $sql = "SELECT * FROM vacaciones WHERE estado = 'pendiente'";
