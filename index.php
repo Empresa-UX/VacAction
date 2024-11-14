@@ -6,7 +6,7 @@
 
     <!-- http://127.0.0.1:5500/index.html -->
     <link rel="stylesheet" href="./css/style-preview.css">
-    <link rel="icon" href="/img/icons_logo/icon_black.ico" type="image/x-icon">
+    <link rel="icon" href="/img/icons_logo/icon_white.ico" type="image/x-icon">
     <title>VacAction | Software</title>
 </head>
 

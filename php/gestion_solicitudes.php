@@ -20,6 +20,7 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/icons_logo/icon_white.ico" type="image/x-icon">
     <title>Gestionar Solicitudes</title>
     <style>
         /* Estilos generales para el cuerpo de la página */

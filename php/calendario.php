@@ -63,7 +63,7 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendario de Vacaciones</title>
     <!-- Favicon de la página -->
-    <link rel="icon" href="/img/icons_logo/icon_black.ico" type="image/x-icon">
+    <link rel="icon" href="../img/icons_logo/icon_white.ico" type="image/x-icon">
     <!-- Hoja de estilos del calendario -->
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
     <style>
