@@ -1,15 +1,12 @@
 /* ----------------------------------------------- Cuerpo de la Página ----------------------------------------------- */
-#body {
+body {
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     height: 1000px;
-    background-image: url("/img/backgrounds/background-preview.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
     min-height: 100vh;
+    background-color: aqua;
 }
 /* ------------------------------------------------- Cuerpo del header ------------------------------------------------- */
 #header {
@@ -145,99 +142,6 @@
     background-color: #575757;
 }
 
-/* ------------------------------------------------- Contenido ------------------------------------------------- */
-#contenido_1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 75vh;
-    gap: 50px;
-    z-index: 999;
-    margin-bottom: 20vh;
-}
-#contenido_2{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: darkslategray;
-    height: 500px;
-    width: 100%;
-    z-index: 999;
-    color: white;
-
-}
-/* ------------------------------------------------- contenido_1_seccion_1 y subniveles ------------------------------------------------- */
-#contenido_1_seccion_1{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-#sector_1_CS_1{
-    color: rgb(255, 255, 255);
-    text-shadow: 2px 2px 4px rgb(25, 22, 22), -2px -2px 4px rgb(45, 45, 71);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    align-items: center;
-    animation: movefromright 2s ease-out forwards;
-    opacity: 0; 
-}
-
-#sector_1_CS_1 p {
-    margin: 15px;
-}
-
-#sector_2_CS_1 {
-    padding: 0px;
-    margin: 0px 0px;
-    animation: moveFromRight 2s ease-out forwards;
-    opacity: 0;
-}
-
-#sector_2_CS_1 img{
-    box-shadow: 50px 50px 15px rgba(0, 0, 0, 0.3); 
-
-}
-
-@keyframes movefromright{
-    0% {
-        transform: translatey(100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translatey(0);
-        opacity: 1;
-    }
-}
-
-@keyframes moveFromRight {
-    0% {
-        transform: translatey(100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translatey(0); 
-        opacity: 1;
-    }
-}
-
-#sector_2_CS_1 img{
-    height: auto;
-    width: 600px;
-    padding: 0px;
-}
-
-#primera_vista_parte_superior_CS_1 {
-    font-size: 40px;
-}
-
-#segunda_vista_parte_inferior_CS_1 {
-    font-size: 20px;
-    text-align: center;
-}
-
 /* ------------------------------------------------- footer ------------------------------------------------- */
 #footer {
     margin: 0px;
@@ -257,4 +161,111 @@
     top: 20px;
     margin: 20px 100px;
     height: auto;
+}
+
+/* ------------------------------------------------- Contenido ------------------------------------------------- */
+#contenido_pricipal {
+    background-color: #ffffff;
+    padding: 60px;
+    max-width: 900px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#contenido_pricipal:hover {
+    transform: translateY(-5px);
+}
+
+#titulo h1 {
+    color: rgb(38, 44, 152);
+    text-shadow: 10px 10px 20px rgb(126, 110, 218), -2px -2px 4px rgb(167, 30, 30);
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+#fecha_de_lanzamiento h2,
+#caracteristicas h3,
+#mejoras h3,
+#correccion_de_errores h3 {
+    color: #0056b3;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+#caracteristicas p, #mejoras p, #correccion_de_errores p {
+    color: #555;
+    font-size: 1em;
+    line-height: 1.8;
+    text-align: justify;
+    margin: 0;
+}
+
+#caracteristicas, #mejoras, #correccion_de_errores {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-left: 4px solid #007bff;
+    background-color: #f9fbfd;
+    border-radius: 5px;
+}
+
+#caracteristicas ul, #mejoras ul, #correccion_de_errores ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#caracteristicas li, #mejoras li, #correccion_de_errores li {
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #ffffff;
+    border-left: 4px solid #007bff;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+#caracteristicas li:hover, #mejoras li:hover, #correccion_de_errores li:hover {
+    background-color: #e9f1fc;
+}
+
+#caracteristicas li::before, #mejoras li::before, #correccion_de_errores li::before {
+    content: "•";
+    color: #007bff;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#nota_final p {
+    color: #555;
+    font-size: 1.1em;
+    text-align: center;
+    margin-top: 40px;
+    font-style: italic;
+}
+
+@media (max-width: 600px) {
+    #contenido_pricipal {
+        padding: 30px;
+    }
+
+    #titulo h1 {
+        font-size: 2em;
+    }
+
+    #fecha_de_lanzamiento h2 {
+        font-size: 1.3em;
+    }
+
+    #caracteristicas h3, #mejoras h3, #correccion_de_errores h3 {
+        font-size: 1.5em;
+    }
+
+    #caracteristicas li, #mejoras li, #correccion_de_errores li {
+        font-size: 0.95em;
+    }
 }

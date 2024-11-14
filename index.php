@@ -14,22 +14,22 @@
     <section id="header">
         <header id="sectores_header">
             <div id="sector_1_header">
-                <a href="index.html"><img src="./img/icons_logo/icon_white.ico" alt="Page icon"></a>
+                <a href="/index.php"><img src="./img/icons_logo/icon_white.ico" alt="Page icon"></a>
             </div>
             <div id="sector_2_header">
-                <a href="">
+                <a href="/html/Empresa.html">
                     <p>Empresa</p>
                 </a>
-                <a href="">
-                    <p>Más informacion</p>
+                <a href="/html/Noticias_industria.html">
+                    <p>Noticias de la Industria</p>
                 </a>
-                <a href="">
+                <a href="/html/Notas_de_version.html">
                     <p>Notas de version</p>
                 </a>
-                <a href="">
-                    <p>Noticias</p>
+                <a href="/html/Blog.html">
+                    <p>Blog</p>
                 </a>
-                <a href="">
+                <a href="/html/Soporte.html">
                     <p>Soporte</p>
                 </a>
             </div>
@@ -43,9 +43,9 @@
                     </div>
                 </button>
                 <div id="dropdown-menu">
-                    <a href="http://localhost/VacAction/php/login.php">Iniciar sesion</a>
-                    <a href="http://localhost/VacAction/php/register.php">Registrarse</a>
-                    <a href="#">Ayuda</a>
+                    <a href="php/login.php">Iniciar sesion</a>
+                    <a href="php/register.php">Registrarse</a>
+                    <a href="html/Soporte.html">Ayuda</a>
                 </div>
             </div>
         </header>
@@ -70,7 +70,7 @@
             </div>
             <div id="sector_2_CS_1">
                 <div>
-                    <p><img src="./img/desmostracion.png" alt="">
+                    <p><img src="./img/demostracion.png" alt="">
                 </div>
             </div>
         </div>

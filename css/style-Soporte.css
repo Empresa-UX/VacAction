@@ -1,0 +1,304 @@
+/* ----------------------------------------------- Cuerpo de la Página ----------------------------------------------- */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 1000px;
+    min-height: 100vh;
+    background-color: aqua;
+}
+/* ------------------------------------------------- Cuerpo del header ------------------------------------------------- */
+#header {
+    position: sticky;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0288d1;
+    color: white;
+    width: 100%;
+    padding: 10px 0px;
+    z-index: 1000;
+    
+}
+
+#header div {
+    display: inline-block;
+}
+
+#sectore_header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* ------------------------------------------------- Cuerpo sector_1 ------------------------------------------------- */
+#sector_1_header {
+    position: absolute;
+    left: 15px;
+    top: 6px;
+    padding: 9px 20px;
+}
+#sector_1_header img {
+    height: 40px;
+    width: auto;
+    margin-right: 20px;
+}
+
+#sector_1_header img:active{
+    height: 35px;
+    width: auto;
+    margin-bottom: 1px;
+    margin-top: 3px;
+    margin-left: 3px;
+}
+/* ------------------------------------------------- Cuerpo sector_2 ------------------------------------------------- */
+#sector_2_header {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#sector_2_header a {
+    text-decoration-line: none;
+    color: rgb(198, 200, 227);
+    background-color: color(srgb red green blue);
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px 40px;
+}
+
+#sector_2_header a:hover{
+    color: white;
+    padding: 26px 40px;
+    margin: 0px 0px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+#sector_2_header p {
+    display: inline-block;
+}
+
+/* ------------------------------------------------- Cuerpo sector_3 ------------------------------------------------- */
+#sector_3_header {
+    position: absolute;
+    top: 9px;
+    right: 30px;
+    padding: 9px 20px;
+}
+
+#sector_3_header button{
+    border: none;
+    background: transparent;
+    caret-color: transparent;
+    cursor: pointer;
+}
+
+#sector_3_header img {
+    height: 30px;
+    width: auto;
+}
+
+#sector_3_header img:active{
+    height: 25;
+    width: auto;
+    margin-bottom: 1px;
+    margin-top: 2.5px;
+    margin-right: 2px;
+}
+
+#flecha_icono img{
+    height: 15px;
+}
+
+#listas_sesion_sector_3_header {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+#dropdown-menu {
+    display: none; /* Oculto inicialmente */
+    position: absolute;
+    background-color: darkslategray;
+    box-shadow: 0px 8px 16px rgb(222, 209, 209);
+    min-width: 160px;
+    right: -25px;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+#dropdown-menu a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+#dropdown-menu a:hover {
+    background-color: #575757;
+}
+
+/* ------------------------------------------------- footer ------------------------------------------------- */
+#footer {
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #0288d1; 
+    color: white;
+    flex-direction: column;
+    padding: 10px 0;
+    min-height: 15vh;
+    margin-top: auto;
+    align-items: center;
+}
+#footer div{
+    display: inline-block;
+    top: 20px;
+    margin: 20px 100px;
+    height: auto;
+}
+
+/* ------------------------------------------------- Contenido ------------------------------------------------- */
+
+#contenido_pricipal {
+    background-color: #ffffff;
+    padding: 80px 40px;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom right, #5e79e2, #e9f2fc);
+}
+
+#contenido_pricipal:hover {
+    transform: translateY(-5px);
+}
+
+#titulo h1 {
+    color: rgb(38, 44, 152);
+    text-shadow: 10px 10px 20px rgb(126, 110, 218), -2px -2px 4px rgb(167, 30, 30);
+    font-size: 3.4em;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#titulo h2 {
+    color: #46444f;
+    font-size: 1.4em;
+    text-align: center;
+    margin-bottom: 40px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+#contacto, #Horario_soporte, #retroalimentacion {
+    margin-bottom: 40px;
+    padding: 35px 30px;
+    background-color: #f9fbfd;
+    border-radius: 12px;
+    border-left: 6px solid #007bff;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+    transition: background-color 0.3s ease;
+    background: linear-gradient(135deg, #f0f8ff, #e0f2ff);
+}
+
+#contacto:hover, #Horario_soporte:hover, #retroalimentacion:hover {
+    background-color: #e9f1fc;
+}
+
+#contacto h3, #Horario_soporte h3, #retroalimentacion h3 {
+    color: #007bff;
+    font-size: 2.1em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+#contacto p, #Horario_soporte p, #retroalimentacion p {
+    color: #555;
+    font-size: 1.1em;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+#contacto ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#contacto li {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #ffffff;
+    border-left: 5px solid #007bff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contacto li:hover {
+    background-color: #e9f1fc;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+strong {
+    color: #0056b3;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    #contenido_pricipal {
+        padding: 60px 20px;
+    }
+
+    #titulo h1 {
+        font-size: 2.8em;
+    }
+
+    #titulo h2 {
+        font-size: 1.2em;
+    }
+
+    #contacto h3, #Horario_soporte h3, #retroalimentacion h3 {
+        font-size: 1.8em;
+    }
+
+    #contacto li, #Horario_soporte p, #retroalimentacion p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 600px) {
+    #contenido_pricipal {
+        padding: 40px 10px;
+    }
+
+    #titulo h1 {
+        font-size: 2.4em;
+    }
+
+    #titulo h2 {
+        font-size: 1.1em;
+    }
+
+    #contacto h3, #Horario_soporte h3, #retroalimentacion h3 {
+        font-size: 1.5em;
+    }
+
+    #contacto li {
+        font-size: 0.95em;
+    }
+}
